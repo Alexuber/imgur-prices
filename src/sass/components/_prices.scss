@@ -1,0 +1,158 @@
+.prices {
+  padding: 25px 0;
+}
+
+.prices-list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
+}
+
+.prices-title {
+  text-align: center;
+  color: #373a3f;
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 70px;
+}
+
+.prices-list__item {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  max-width: 350px;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 30px) / 2);
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 300px;
+    flex-basis: calc((100% - 3 * 20px) / 4);
+  }
+}
+
+.card {
+  background-color: #fff;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  height: 550px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 30px 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  position: relative;
+
+  transition: border-color 300ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    scale 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover,
+  &:focus {
+    scale: 1.1;
+    border-color: #9fcd2f;
+    cursor: pointer;
+    & .button {
+      border-color: #9fcd2f;
+    }
+  }
+}
+
+.popular-label {
+  rotate: 90deg;
+  display: block;
+  position: absolute;
+  top: -14px;
+  right: -13px;
+  width: 110px;
+}
+
+.card-info__title {
+  font-weight: 700;
+  font-size: 26px;
+  color: #000;
+
+  margin-bottom: 50px;
+}
+
+.features__total {
+  font-size: 78px;
+  color: #2a4965;
+}
+
+.features__currency {
+  color: #2a4965;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.card-info {
+  margin-bottom: 50px;
+}
+
+.card-info__title {
+  font-size: 26px;
+  color: #373a3f;
+}
+
+.card-wrap {
+  padding: 0 15px;
+}
+
+.card-list {
+  text-align: start;
+  margin-bottom: 30px;
+  padding: 0 30px;
+}
+
+.card-list__icon {
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.card-list__item {
+  display: flex;
+  align-items: center;
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+.card__link {
+  text-decoration: underline;
+  color: #2f9ed5;
+  background: #ffffff;
+
+  width: 250px;
+  height: 55px;
+  padding-top: 15px;
+
+  border: 2px solid #2a4965;
+  border-radius: 10px;
+
+  transition: border-color 300ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    background 300ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    color 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover,
+  &:focus {
+    background-color: #9fcd2f;
+    cursor: pointer;
+    color: #ffffff;
+  }
+}
