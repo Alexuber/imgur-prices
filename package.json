@@ -18,7 +18,8 @@
     "url": "https://github.com/Alexuber/imgur-prices/issues"
   },
   "dependencies": {
-    "modern-normalize": "^1.1.0"
+    "modern-normalize": "^1.1.0",
+    "nanoid": "^4.0.2"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",

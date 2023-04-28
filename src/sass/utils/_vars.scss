@@ -4,3 +4,12 @@ $tablet: 768px;
 $desktop: 1280px;
 $max-mobile: 767.98px;
 $max-tablet: 1279.98px;
+
+// Colors
+
+:root {
+  --primary-text-color: #000;
+  --accent-color: #2196f3;
+  --light-color: #fff;
+  --price-accent: #2a4965;
+}

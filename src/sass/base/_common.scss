@@ -3,3 +3,17 @@ body {
   color: #879cad;
   font-family: 'Montserrat', sans-serif;
 }
+
+.tasksMenu {
+  padding: 60px 60px;
+}
+.tasksMenu ul li {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.back {
+  display: block;
+  margin-bottom: 50px;
+}

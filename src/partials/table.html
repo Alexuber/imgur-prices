@@ -1,0 +1,102 @@
+<section class="table">
+  <div class="container table-container">
+    <a class="back" href="../index.html">Back</a>
+    <form class="form">
+      <label class="label">
+        <span class="label__name">Name</span>
+
+        <input class="form__input" type="text" id="name" required />
+        <svg class="label__icon" width="18" height="18">
+          <use href="../images/symbol-defs.svg#icon-form-person"></use>
+        </svg>
+      </label>
+      <label class="label">
+        <span class="label__name">Email</span>
+
+        <input class="form__input" type="email" id="email" required />
+        <svg class="label__icon" width="18" height="18">
+          <use href="../images/symbol-defs.svg#icon-form-email"></use>
+        </svg>
+      </label>
+      <label class="label age">
+        <span class="label__name">Age</span>
+
+        <input
+          class="form__input"
+          type="age"
+          id="age"
+          min="18"
+          max="99"
+          required
+        />
+        <svg class="label__icon" width="18" height="18">
+          <use href="../images/symbol-defs.svg#icon-age"></use>
+        </svg>
+      </label>
+      <button class="user-form-button" type="submit">Add</button>
+    </form>
+    <div class="tableWrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <div class="sort-wrapper">
+                <p>Id</p>
+                <div>
+                  <button type="button" class="sort-asc" data-column="age">
+                    ▲
+                  </button>
+                  <button type="button" class="sort-desc" data-column="age">
+                    ▼
+                  </button>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div class="sort-wrapper">
+                <p>Name</p>
+                <div>
+                  <button type="button" class="sort-asc" data-column="age">
+                    ▲
+                  </button>
+                  <button type="button" class="sort-desc" data-column="age">
+                    ▼
+                  </button>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div class="sort-wrapper">
+                <p>Email</p>
+                <div>
+                  <button type="button" class="sort-asc" data-column="age">
+                    ▲
+                  </button>
+                  <button type="button" class="sort-desc" data-column="age">
+                    ▼
+                  </button>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div class="sort-wrapper">
+                <p>Age</p>
+                <div>
+                  <button type="button" class="sort-asc" data-column="age">
+                    ▲
+                  </button>
+                  <button type="button" class="sort-desc" data-column="age">
+                    ▼
+                  </button>
+                </div>
+              </div>
+            </th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="body"></tbody>
+      </table>
+    </div>
+  </div>
+</section>

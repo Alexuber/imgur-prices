@@ -1,0 +1,212 @@
+// User form
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+
+  @media screen and (min-width: $tablet) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: relative;
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &:focus {
+    outline: 1px solid var(--accent-color);
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 200px;
+  }
+  @media screen and (min-width: $desktop) {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.age {
+  @media screen and (min-width: $desktop) {
+    width: 100px;
+    margin-bottom: 0px;
+  }
+}
+
+.input {
+  outline: 1px solid transparent;
+}
+
+.form__input {
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  padding-left: 42px;
+  padding-right: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+
+  &:hover + .label__icon,
+  &:focus + .label__icon {
+    fill: var(--accent-color);
+  }
+}
+
+.form__input:hover,
+.form__input:focus {
+  border-color: var(--accent-color);
+}
+
+.label__name {
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+
+  color: var(--title-text-color);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.label__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  fill: var(--primary-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.user-form-button {
+  height: 35px;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border: 1px solid #1a7c93;
+  border-radius: 7px;
+
+  transition: background-color 300ms linear, color 300ms linear;
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 0;
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    right: -45px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #1a7c93;
+    color: #fff;
+  }
+}
+
+//Users Table
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #1a7c93;
+  font-weight: bold;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.sort-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.sort-wrapper p {
+  margin: 0;
+  margin-right: 5px;
+}
+
+.sort-wrapper div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sort-wrapper button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.sort-asc,
+.sort-desc {
+  color: #aaa;
+}
+
+.sort-asc:hover,
+.sort-desc:hover {
+  color: var(--primary-text-color);
+}
+
+.edit,
+.delete {
+  border: 1px solid #1a7c93;
+  border-radius: 5px;
+  background-color: #ffffff;
+
+  transition: color 300ms linear, background-color 300ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: #1a7c93;
+    color: #fff;
+  }
+}
+
+.options {
+  width: 40px;
+}
+
+.tableWrapper {
+  @media screen and (max-width: $tablet) {
+    overflow: scroll;
+  }
+}

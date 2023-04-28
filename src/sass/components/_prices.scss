@@ -21,6 +21,7 @@
   color: #373a3f;
   font-size: 42px;
   font-weight: 600;
+
   margin-bottom: 70px;
 }
 
@@ -43,7 +44,7 @@
 }
 
 .card {
-  background-color: #fff;
+  background-color: var(--light-color);
   border: 2px solid transparent;
   border-radius: 10px;
   height: 550px;
@@ -85,18 +86,18 @@
 .card-info__title {
   font-weight: 700;
   font-size: 26px;
-  color: #000;
+  color: var(--primary-text-color);
 
   margin-bottom: 50px;
 }
 
 .features__total {
   font-size: 78px;
-  color: #2a4965;
+  color: var(--price-accent);
 }
 
 .features__currency {
-  color: #2a4965;
+  color: var(--price-accent);
   font-weight: 700;
   font-size: 28px;
 }
@@ -136,13 +137,13 @@
 .card__link {
   text-decoration: underline;
   color: #2f9ed5;
-  background: #ffffff;
+  background: var(--light-color);
 
   width: 250px;
   height: 55px;
   padding-top: 15px;
 
-  border: 2px solid #2a4965;
+  border: 2px solid var(--price-accent);
   border-radius: 10px;
 
   transition: border-color 300ms cubic-bezier(0.075, 0.82, 0.165, 1),
@@ -153,6 +154,6 @@
   &:focus {
     background-color: #9fcd2f;
     cursor: pointer;
-    color: #ffffff;
+    color: var(--light-color);
   }
 }
